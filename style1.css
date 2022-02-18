@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+  }
+.black{
+    background-color: rgb(78, 169, 255);
+    /* border: 10px solid black; */
+    height: 40px;
+}
+.contaner{
+    padding-left: 76px;
+    margin-top: 37px;
+    font-size: 21px;
+}
+.txt_blue{
+    color: rgb(0, 140, 255);
+    background-color: rgb(170, 222, 243);
+}
+.sub{
+    height: 37px;
+    width: 88px;
+    border-radius: 17px;
+    background-color: #4dc4d0;
+    margin-bottom: 28px;
+}
+.col-blue{
+    background-color: #3eff31;
+}
+.modal-body{
+    font-size: 20px;
+}
+.mid{
+    margin-left: 536px;
+}
