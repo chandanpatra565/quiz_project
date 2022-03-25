@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="black"></div>
+    <div class="contaner">
+        <form action="">
+            <p class="txt_blue">Q.Javascript is an _______ language?</p>
+              <input type="radio" id="object-oriented" name="language_type" value="object-oriented">
+              <label for="html">Object-Oriented</label><br>
+              <input type="radio" id="object-base" name="language_type" value="object-base">
+              <label for="html">Object-Base</label><br>
+              <input type="radio" id="procedural" name="language_type" value="procedural">
+              <label for="html">Procedural</label><br>    
+              <input type="radio" id="none1" name="language_type" value="none">
+              <label for="html">None of the avobe</label><br>    
+           
+            <br>
+            <p class="txt_blue">Q.Which of the following keywords is used to define a variable in Javascript?</p>
+              <input type="radio" id="var" name="variable_type" value="var">
+              <label for="html">var</label><br>
+              <input type="radio" id="let" name="variable_type" value="let">
+              <label for="html">let</label><br>
+              <input type="radio" id="Both-A-B" name="variable_type" value="both-A-B">
+              <label for="html">Both A-B</label><br>    
+              <input type="radio" id="none2" name="variable_type" value="none">
+              <label for="html">None of the avobe</label><br>
+            <br>
+            <p class="txt_blue">Q.How can a datatype be declared to be a constant type?</p>
+              <input type="radio" id="const" name="con_type" value="const">
+              <label for="html">const</label><br>
+              <input type="radio" id="let" name="con_type" value="let">
+              <label for="html">let</label><br>
+              <input type="radio" id="var" name="con_type" value="var">
+              <label for="html">var</label><br>    
+              <input type="radio" id="none3" name="con_type" value="none">
+              <label for="html">None of the avobe</label><br>
+            <br>
+          <p class="txt_blue">Q.What will be the output of the following code snippet?
+              <br>
+              <code class="language-javascript hljs">&lt;script type=<span class="hljs-string">"text/javascript"</span>&gt;<br>
+                  a = <span class="hljs-number">5</span> + <span class="hljs-string">"9"</span>;<br>
+                  <span class="hljs-built_in">document</span>.write(a);<br>
+                  &lt;/script&gt;</code>
+          </p>
+                <input type="radio" id="14" name="ans" value="14">
+                <label for="html">14</label><br>
+                <input type="radio" id="59" name="ans" value="59">
+                <label for="html">59</label><br>
+                <input type="radio" id="error" name="ans" value="error">
+                <label for="html">Error</label><br>    
+                <input type="radio" id="none4" name="ans" value="none">
+                <label for="html">None of the avobe</label><br>
+            <br>
+            <p class="txt_blue">Q.What will be the output of the following code snippet?
+              <br>
+              <code>
+                  a = [1, 2, 3, 4, 5];
+                  <br>
+                  print(a.slice(2, 4));
+              </code>
+          </p>
+                <input type="radio" id="2_4" name="slice" value="2_4">
+                <label for="html">2 4</label><br>
+                <input type="radio" id="2_3_4" name="slice" value="2_3_4">
+                <label for="html">2 3 4</label><br>
+                <input type="radio" id="3_4" name="slice" value="3_4">
+                <label for="html">3 4</label><br>    
+                <input type="radio" id="none5" name="slice" value="none">
+                <label for="html">None of the avobe</label><br>
+            <br>
+            <div class="mid">
+
+                <input type="button" value="submit" class="sub" data-toggle="modal" data-target="#myModal" data-backdrop='static' data-keyboard='false' onclick="result_quiz()">
+                <button type="reset" class="sub" >Reset</button>
+            </div>
+      </form>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header col-blue">
+              <button type="button" class="close" data-dismiss="modal" onclick="Reload()">&times;</button>
+              <h4 class="modal-title">Your Result</h4>
+            </div>
+            <div class="modal-body">
+              <p id="res">0</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="Reload()">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <script>
+          function result_quiz(){
+            var ans1 = document.getElementsByName('language_type');
+            var ans2 = document.getElementsByName('variable_type');
+            var ans3 = document.getElementsByName('con_type');
+            var ans4 = document.getElementsByName('ans');
+            var ans5 = document.getElementsByName('slice');  
+            var count=0;
+            for(i = 0; i < ans1.length; i++) {
+                if(ans1[i].checked && ans1[i].value == 'object-oriented'){
+                    count++;
+                }
+            }
+            for(i = 0; i < ans2.length; i++) {
+                if(ans2[i].checked && ans2[i].value == 'both-A-B'){
+                    count++;
+                }
+            }
+            for(i = 0; i < ans3.length; i++) {
+                if(ans3[i].checked && ans3[i].value == 'const'){
+                    count++;
+                }
+            }
+            for(i = 0; i < ans4.length; i++) {
+                if(ans4[i].checked && ans4[i].value == '59'){
+                    count++;
+                }
+            }
+            for(i = 0; i < ans5.length; i++) {
+                if(ans5[i].checked && ans5[i].value == '3_4'){
+                    count++;
+                }
+            }
+            if(count>=4){
+                document.getElementById("res").innerHTML="Marks "+count+" out of 5 <br>"+"<br>"+"final call Yes";
+                return false;
+            }
+            if(count>=3){
+                document.getElementById("res").innerHTML="Marks "+count+" out of 5 <br>"+"<br>"+"final call May be";
+                return false;
+            }else{
+                document.getElementById("res").innerHTML ="Marks "+count+" out of 5 <br>"+"<br>"+"final call No";
+                return false;
+            }
+          }
+          function Reload(){
+            location.reload();
+          }
+          
+
+      </script>
+    
+</body>
+</html>
